@@ -1,0 +1,65 @@
+.period-tracker-container {
+  max-width: 400px;
+  margin: 10px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc; /* Adding border to the container */
+  border-radius: 8px; /* Adding border radius for a rounded appearance */
+}
+
+.period-form {
+  margin-bottom: 5px; /* Adding some margin at the bottom of the form */
+}
+
+.period-form input {
+  margin-bottom: 10px; /* Adding some margin between input fields */
+  padding: 8px;
+  border: 1px solid #ccc; /* Adding border to input fields */
+  border-radius: 4px; /* Adding border radius for a rounded appearance */
+}
+
+.period-form button {
+  padding: 8px 16px;
+  background-color: #5b0263;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.period-form button:hover {
+  background-color: #710280;
+}
+
+.period-dates {
+  margin-top: 0px; /* Adding some margin at the top of the period dates list */
+}
+
+.period-dates ul {
+  list-style: none; /* Removing default list styles */
+  padding: 0;
+}
+
+.period-dates li {
+  margin-bottom: 5px; /* Adding some margin between list items */
+}
+
+.period-dates table {
+  width: 100%;
+  border-collapse: collapse; /* Collapsing table borders */
+}
+
+.period-dates th,
+.period-dates td {
+  padding: 10px;
+  border: 1px solid #ccc; /* Adding border to table cells */
+}
+
+.period-dates th {
+  background-color: #f2f2f2; /* Background color for table header */
+}
+
+.period-dates {
+  margin-top: 20px;
+  text-align: center; /* Aligning table in center */
+}
