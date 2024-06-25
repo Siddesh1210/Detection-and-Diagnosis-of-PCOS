@@ -11,9 +11,9 @@ yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
 
-/Python Model/pcos_advance_model.pkl
-/Python Model/pcos_base_yn_model.pkl
-/Python Model/pcos_sonography_model.h5
+# /Python Model/pcos_advance_model.pkl
+# /Python Model/pcos_base_yn_model.pkl
+# /Python Model/pcos_sonography_model.h5
 
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
