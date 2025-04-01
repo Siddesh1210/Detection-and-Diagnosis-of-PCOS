@@ -5,20 +5,19 @@ import Logo from "../assets/images/Logo.png";
 const Navbar = () => {
   const [login, setLogin] = useState(false);
 
-  async function checkLogin() {
-    const response = await fetch("http://localhost:1234/users/checklogin", {
-      method: "GET",
-    });
-    const result = await response.json();
-    console.log(result.isOk);
-    if (result.isOk) setLogin(true);
-  }
+  //   async function checkLogin() {
+  //     const response = await fetch("http://localhost:1234/users/checklogin", {
+  //       method: "GET",
+  //     });
+  //     const result = await response.json();
+  //     if (result) setLogin(true);
+  //   }
   useEffect(() => {
     const token = localStorage.getItem("access_token");
+    console.log("Token: ", token);
     if (token != null) {
       setLogin(true);
     }
-    checkLogin();
   });
   return (
     <>

@@ -19,12 +19,13 @@ import DietPage from "./pages/DietPage";
 import Yoga from "./pages/Yoga";
 import DoctorList from "./pages/DoctorList";
 import ScrollToTop from "./components/ScrollToTop";
+import CheckLogin from "./components/CheckLogin";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <ScrollToTop/>
+      <ScrollToTop />
       <Outlet />
       <Footer />
     </>
@@ -57,49 +58,49 @@ const appLayout = createBrowserRouter([
         element: <LoginPage />,
       },
       {
-        path:"/detect-pcos-by-text",
-        element:<PCOSText/>
+        path: "/detect-pcos-by-text",
+        element: <PCOSText />,
       },
       {
-        path:"/advance-pcos-test",
-        element:<AdvancePcosForm/>
+        path: "/advance-pcos-test",
+        element: <AdvancePcosForm />,
       },
       {
-        path:"/sonography-test",
-        element:<SonographyTest/>
+        path: "/sonography-test",
+        element: <SonographyTest />,
       },
       {
-        path:"/calculate-bmi",
-        element:<BMICalculator/>
+        path: "/calculate-bmi",
+        element: <BMICalculator />,
       },
       {
-        path:"/sentotp",
-        element:<SentOtp/>
+        path: "/sentotp",
+        element: <SentOtp />,
       },
       {
-        path:"/period-tracker",
-        element:<PeriodTracker/>
+        path: "/period-tracker",
+        element: <PeriodTracker />,
       },
       {
-        path:"/verifyotp/:email",
-        element:<VerifyOtp/>
+        path: "/verifyotp/:email",
+        element: <VerifyOtp />,
       },
       {
-        path:"/diet-plan",
-        element:<DietPage/>
+        path: "/diet-plan",
+        element: <DietPage />,
       },
       {
-        path:"/yoga-plan",
-        element:<Yoga/>
+        path: "/yoga-plan",
+        element: <Yoga />,
       },
       {
-        path:"/doctor-list",
-        element:<DoctorList/>
+        path: "/doctor-list",
+        element: <DoctorList />,
       },
       {
-        path:"/resetnewpassword/:email",
-        element:<ConfirmPassword/>
-      }
+        path: "/resetnewpassword/:email",
+        element: <ConfirmPassword />,
+      },
     ],
   },
 ]);

@@ -11,7 +11,9 @@ from keras.preprocessing import image
 app = FastAPI()
 
 # to run file
-# use this command -->  uvicorn pcos_detect:app --reload
+# Go on Python Model and than type : uvicorn pcos_detect:app --reload
+# For sono image search Normal Sonography / PCOS in Download Folder
+# for Login use payal@gmail.com, payal as password
 @app.get("/")
 def root_api():
     return {"message": "Server Reached"}

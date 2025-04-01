@@ -43,7 +43,7 @@ route.post("/basic-text", async (req, res) => {
     userToken,
   } = req.body;
 
-  const user=await User.findOne({accessToken:userToken})
+  const user = await User.findOne({ accessToken: userToken });
 
   const response = await fetch(
     `http://localhost:8000/check-pcos?age=${age}&weight=${weight}&height=${height}&bmi=${bmi}&bloodGroup=${bloodGroup}&pulseRate=${pulseRate}&breathPerMinute=${breathPerMinute}&heartRate=${heartRate}&missingCycle=${missingCycle}&cycleLength=${cycleLength}&marriageStatus=${marriageStatus}&pregnant=${pregnant}&noOfAborption=${noOfAborption}&hip=${hip}&waist=${waist}&hipWaistRatio=${hipWaistRatio}&weightGain=${weightGain}&hairGrowth=${hairGrowth}&skinDarkening=${skinDarkening}&hairLoss=${hairLoss}&pimples=${pimple}&fastFood=${fastFood}&regularExercise=${regularExercise}&bpSystolic=${bpSystolic}&bpPrastolic=${bpPrastolic}`
@@ -90,16 +90,16 @@ route.post("/basic-text", async (req, res) => {
 
 //http://localhost:6000/pcos-test/advance-text
 route.post("/advance-text", async (req, res) => {
-  const { amh, tsh, fsh_lh, prl, hb, rbs, userToken} = req.body;
-  const user=await User.findOne({accessToken:userToken})
+  const { amh, tsh, fsh_lh, prl, hb, rbs, userToken } = req.body;
+  const user = await User.findOne({ accessToken: userToken });
   const response = await fetch(
     `http://localhost:8000/checkadvance-pcos?amh=${amh}&tsh=${tsh}&fsh_lh=${fsh_lh}&prl=${prl}&hb=${hb}&rbs=${rbs}`
     // http://localhost:8000/checkadvance-pcos?tsh=2.0&amh=9.0&fsh_lh=15.0&prl=28.0&hb=10.0&rbs=150.0
   );
 
   const result = await response.json();
-  console.log(result);
-  console.log(user._id);
+  //   console.log(result);
+  //   console.log(user._id);
   let pcosData = await PcosAdvance.create({
     userId: user._id,
     amh,
